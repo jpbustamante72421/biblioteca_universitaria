@@ -4,56 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ titulo }} | Biblioteca Universitaria</title>
-    <style>
-        body {
-            margin: 0;
-            background-color: #f2f6fa;
-            color: #243447;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            padding: 1rem 2rem;
-            background-color: #1f4e79;
-            color: white;
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        nav a {
-            padding: 0.5rem 0.75rem;
-            border-radius: 4px;
-            background-color: #376b9b;
-            color: white;
-            text-decoration: none;
-        }
-
-        nav a:hover,
-        nav a:focus {
-            background-color: #163b5c;
-        }
-
-        main {
-            padding: 1rem 2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/biblioteca.css') }}">
 </head>
-<body>
-    <header>
-        <h1>Biblioteca Universitaria</h1>
-        <nav>
-            <a href="{{ url_for('home') }}">Inicio</a>
-            <a href="{{ url_for('catalogo') }}">Catálogo</a>
-            <a href="{{ url_for('servicios') }}">Servicios</a>
-            <a href="{{ url_for('contacto') }}">Contacto</a>
+<body class="biblio-body">
+    <header class="biblio-navbar">
+        <h1 class="biblio-brand">Biblioteca Universitaria</h1>
+        <nav class="biblio-nav">
+            <a class="biblio-nav-link" href="{{ url_for('home') }}">Inicio</a>
+            <a class="biblio-nav-link" href="{{ url_for('catalogo') }}">Catálogo</a>
+            <a class="biblio-nav-link" href="{{ url_for('servicios') }}">Servicios</a>
+            <a class="biblio-nav-link" href="{{ url_for('contacto') }}">Contacto</a>
         </nav>
     </header>
 
-    <main>
+    <main class="biblio-container">
         {% block content %}{% endblock %}
     </main>
 </body>

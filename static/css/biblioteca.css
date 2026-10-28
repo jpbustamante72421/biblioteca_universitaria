@@ -1,0 +1,88 @@
+/* ===================================================
+   PALETA DE COLORES: Académica (White & Deep Teal / Navy)
+   =================================================== */
+:root {
+    --biblio-bg: #f9fafb;
+    --biblio-card: #ffffff;
+    --biblio-text-main: #1e293b;
+    --biblio-text-muted: #64748b;
+    --biblio-primary: #0f766e;
+    --biblio-primary-hover: #115e59;
+    --biblio-border: #cbd5e1;
+}
+
+/* 1. Estilos generales */
+body.biblio-body {
+    margin: 0;
+    font-family: 'Merriweather', 'Georgia', serif;
+    background-color: var(--biblio-bg);
+    color: var(--biblio-text-main);
+    line-height: 1.7;
+}
+
+/* Para los elementos que requieran lectura sans-serif moderna (como menús) */
+.navbar, .btn, .biblio-nav-link {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 2. Contenedor Principal de la Biblioteca */
+.biblio-container {
+    box-sizing: border-box;
+    max-width: 960px;
+    margin: 50px auto;
+    background: var(--biblio-card);
+    padding: 45px;
+    border-radius: 8px;
+    border-top: 4px solid var(--biblio-primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+}
+
+/* 3. Barra de Navegación */
+.biblio-navbar {
+    background-color: var(--biblio-card);
+    border-bottom: 1px solid var(--biblio-border);
+    padding: 15px 20px;
+    margin-bottom: 40px;
+    box-shadow: none;
+}
+
+.biblio-brand {
+    font-weight: 700;
+    color: var(--biblio-primary);
+    font-size: 1.25rem;
+    letter-spacing: -0.5px;
+}
+
+.biblio-nav-link {
+    color: var(--biblio-text-muted);
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.biblio-nav-link:hover,
+.biblio-nav-item.active .biblio-nav-link {
+    color: var(--biblio-primary);
+}
+
+.biblio-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* 4. Tipografía y Textos */
+.biblio-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--biblio-text-main);
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.biblio-text {
+    font-size: 1.05rem;
+    color: var(--biblio-text-muted);
+    margin-bottom: 15px;
+}
