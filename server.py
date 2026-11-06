@@ -20,4 +20,4 @@ def contacto():
     return render_template('contacto.html', titulo='Contacto', mensaje='Comunicarse con la biblioteca universitaria')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5050)
+    app.run(host= "0.0.0.0", debug=True, port=5050) 
